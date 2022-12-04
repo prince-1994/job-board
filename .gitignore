@@ -1,3 +1,4 @@
-**/config/**
+**/config
 **/.venv
 **/.python-version
+alembic/__pycache__
