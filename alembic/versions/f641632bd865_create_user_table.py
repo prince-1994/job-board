@@ -21,7 +21,7 @@ def upgrade() -> None:
         'user',
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('email', sa.String(64), nullable=False),
-        sa.Column('is_admin', sa.Boolean, default=False, nullable=False),
+        sa.Column('is_admin', sa.Boolean, server_default='f', nullable=False),
         sa.Column('created_on', sa.DateTime, nullable=False),
         sa.Column('created_by', sa.String(64), nullable=False),
         sa.Column('updated_on', sa.DateTime, nullable=True),

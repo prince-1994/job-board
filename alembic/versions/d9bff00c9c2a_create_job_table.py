@@ -26,6 +26,7 @@ def upgrade() -> None:
         sa.Column('benefits', sa.ARRAY(sa.String(256)), nullable=False),
         sa.Column('company_id', sa.Integer, sa.ForeignKey('data.company.id')),
         sa.Column('recruiter_id', sa.Integer, sa.ForeignKey('data.user.id')),
+        sa.Column('is_published', sa.Boolean, nullable=False, default=False),
         sa.Column('created_on', sa.DateTime, nullable=False),
         sa.Column('created_by', sa.String(64), nullable=False),
         sa.Column('updated_on', sa.DateTime, nullable=True),

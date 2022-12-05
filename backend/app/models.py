@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional
 
+
 class create_mixin:
     created_on: datetime
     created_by: str
